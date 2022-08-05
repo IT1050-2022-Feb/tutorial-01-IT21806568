@@ -16,9 +16,23 @@ Amount = 20 x 50 = 1000
 Distance -> 50
 Amount = 30 x 50 + (50-30) x 40 = 2300*/
 
-#include <stdio.h>
-
-int main() {
+#include<stdio.h>
+int main(void){
   
+  float distance,rate;
+  
+  printf("Enter the distance travelled in km: ");
+  scanf("%f",&distance);
+  
+  if(distance<=30){ //checking whether distance travelled is under 30km
+  	rate = distance*50; //calculating the rate
+  	
+  }
+  else{
+  	rate = 30*50+(distance-30)*40;
+  }
+  printf("Amount to be paid: %.2f",rate);//displaying amount of rent.
   return 0;
+
+
 }
